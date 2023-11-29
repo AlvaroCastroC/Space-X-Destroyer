@@ -1,0 +1,295 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* https://cdn.spacetelescope.org/archives/images/large/heic1509c.jpg */
+
+@font-face {
+    font-family: 'space';
+    src: url('fonts/space\ age.ttf') format('trueType');
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #812929;
+    
+    background-repeat: repeat-y;
+    background-size: 50% 110%;
+    background-image: url("./imgs/astronauta.gif");
+}
+
+.creditos{
+    position: absolute;
+    padding: 20px 20px;
+    width: 390px;
+    color: yellow;
+    
+    background-color: #103c8b;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 50px;
+}
+
+
+canvas {
+ 
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    cursor: pointer;
+    background-image: url('https://wallpapercave.com/wp/tLkGcVg.jpg');
+    background-repeat: no-repeat;
+    background-size: 110% 100%;
+    animation: backg 50s infinite  ;
+}
+
+@keyframes backg {
+    0% {
+        background-position-x: 100%;
+    }50%{
+        background-position-x: 0%;
+    }100%{
+        background-position-x: 100%;
+    }
+
+}
+
+#principal {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 10px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #000;
+    
+
+}
+
+#container-dado{
+    display: flex;
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    display: flex;
+    gap: 190px;
+    padding: 10px 20px;
+    
+}
+
+#pontos, #vidas {
+    
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Space';
+    font-weight: bold;
+    filter: drop-shadow(3px 3px #000);
+}
+
+#pontos{
+    
+    color: rgb(219, 191, 29);
+}
+
+#vidas{
+ 
+    color: #e71111;
+}
+
+#gameOver .tabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 150px auto;
+    padding: 20px 10px;
+
+    width: 450px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #0000005b;
+    backdrop-filter: blur(2px);
+    background: #c9c4c47a;
+    
+    
+}
+
+#gameOver .tabela button {
+    font-size: 20px;
+    font-family: monospace;
+
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #917979;
+    box-shadow: 3px 3px 3px #000;
+}
+
+#gameOver .tabela button:hover {
+    background-color: #9c9090;
+}
+
+#gameOver .tabela #botao-reiniciar.ativado {
+    background-color: #812929;
+    box-shadow:inset 3px 3px 3px #000;
+}
+
+#gameOver {
+    
+    display: none;
+    position: absolute;
+    width:100% ;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* background: linear-gradient(#f0d107f0, rgba(241, 241, 13, 0.867), #fff00f); */
+    backdrop-filter: blur(2px);
+    background: #18171736;
+}
+
+
+.tabela h2 {
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    font-family: 'Space';
+    background: linear-gradient(96deg,  #a86726, #c57d2b, #812929, #c5422b, #c57d2b);
+    background-size: 500% 100%;
+    animation: degrade 15s infinite   ease-in-out;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+
+    filter: drop-shadow(5px 5px 2px #000);
+    
+}
+
+
+@keyframes degrade {
+    0% {
+        background-position-x: 100%;
+    }50%{
+        background-position-x: 0%;
+    }100%{
+        background-position-x: 100%;
+    }
+}
+
+.tabela #pontuacao {
+    color: #812929;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    font-family: monospace;
+    font-weight: bold;
+
+    text-shadow: 1px 2px #0000009a;
+}
+
+#gameInicio {
+    display: block;
+    position: absolute;
+    width:100% ;
+    height: 100%;
+    z-index: 100;
+   
+    backdrop-filter: blur(5px);
+    background: #18171736;
+  
+    width: 100%;
+    
+}
+
+#gameInicio .tabela{
+    font-family: "Space";
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+   flex-wrap: nowrap;
+   padding: 20px 20px;
+   margin: 10% auto;
+    
+   width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #0000005b;
+    backdrop-filter: blur(4px);
+    background: #22212134;
+}
+
+
+
+
+#gameInicio .tabela h1{
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 1.5;
+    font-weight: bolder;
+    background: linear-gradient(100deg, #e71111, #c5422b, #f08e1d, #ffd103, #276699, #103c8b, #e71111);
+    background-size: 500% 100%;-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: backgM 5s infinite ease-in-out;
+    filter: drop-shadow(5px 5px 0px #000);
+    
+}
+
+@keyframes backgM {
+    
+    from{
+        background-position-x: 0%;
+    }to{
+        background-position-x: 120%;
+    }
+}
+
+#gameInicio .tabela h3{
+    text-decoration: underline;
+    text-decoration-color: #c7bdbd;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #c7bdbd;
+    font-weight: bolder;
+
+}
+
+#gameInicio .tabela #botao-iniciar{
+    font-size: 20px;
+    font-family: monospace;
+    text-transform: capitalize;
+
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f3f1f1;
+    box-shadow: 3px 3px 3px #000;
+    transition: 2s 0 linear;
+}
+
+#gameInicio .tabela #botao-iniciar.ativado {
+  
+    background-color: #812929;
+    box-shadow:inset 3px 3px 3px #000;
+}
+
+
+.container-button{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+
+    <title>Space X - Destroyer</title>
+    
+</head>
+<body>
+    <div class="creditos">
+        <header>
+            <h1>Space X - Destroyer</h1>
+            <h3>Jogo criado por: <br> Álvaro de Castro</h3>
+        </header>
+        <section>
+            <h2>Atenção</h2>
+            <p>Toda a estrutura desse jogo foi desenvolvido com intuito de aprendizagem, sem fins lucrativos.</p>
+            <p>Todas imagens, músicas e fontes de texto,  público</p>
+        </section>
+    </div>
+    <div id="principal">
+        <div id="gameInicio">
+            <div class="tabela">
+                <h1>Space X - Destroyer</h1>
+                <h3>The Game</h3>
+                
+                <button id="botao-iniciar" >iniciar</button>
+            </div>
+
+        </div>
+
+       <div id="container-dado">
+            <p id="pontos"></p>
+            <p id="vidas"></p>
+       </div>
+
+        <canvas id="jogo" width = "600"
+        height ='600'>
+        
+        </canvas>
+
+        <div id="gameOver">
+            <div class="tabela">
+
+                <h2>Fim de jogo</h2>
+                <p id="pontuacao">Pontuação: 0</p>
+            
+                <dvi class="container-button">
+                    <button id="botao-reiniciar">Menu Principal</button>
+                <!-- <button id="botao-menu">Voltar ao menu principal</button> -->
+                </dvi>
+            </div>
+    
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
