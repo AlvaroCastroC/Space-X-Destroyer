@@ -20,23 +20,27 @@ body {
     background-color: #812929;
     
     background-repeat: repeat-y;
-    background-size: 50% 110%;
-    background-image: url("./imgs/astronauta.gif");
+    background-size: 100%;
+    background-image: url("https://ak7.picdn.net/shutterstock/videos/23937877/thumb/1.jpg");
 }
 
 .creditos{
     position: absolute;
+    right: 0;
+    bottom: 0;
     padding: 20px 20px;
-    width: 390px;
-    color: yellow;
+    width: 350px;
+    color: rgb(24, 24, 23);
     
-    background-color: #103c8b;
+    /* background-color: #103b8b4d; */
     display: flex;
     flex-direction: column;
-    
     gap: 50px;
 }
 
+.creditos section h2 {
+    text-align: center;
+}
 
 canvas {
  
@@ -236,7 +240,8 @@ canvas {
     line-height: 1.5;
     font-weight: bolder;
     background: linear-gradient(100deg, #e71111, #c5422b, #f08e1d, #ffd103, #276699, #103c8b, #e71111);
-    background-size: 500% 100%;-webkit-background-clip: text;
+    background-size: 500% 100%;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: backgM 5s infinite ease-in-out;
     filter: drop-shadow(5px 5px 0px #000);
